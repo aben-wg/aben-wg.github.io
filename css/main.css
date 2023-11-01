@@ -1,0 +1,17 @@
+.flex-container{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    grid-template-columns: 10% 50px 30%;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    align-content: start;
+    background-color: DodgerBlue;
+}
+.flex-container > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
