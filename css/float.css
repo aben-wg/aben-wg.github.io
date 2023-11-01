@@ -1,0 +1,19 @@
+.container{
+    text-align: center;
+}
+
+.tree{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.py-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.py-img img{
+    max-width: 20px; 
+    height: auto;
+    margin: 5px;
+}
