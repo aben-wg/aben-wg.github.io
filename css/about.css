@@ -71,6 +71,16 @@ body{
     column-gap: 10px;
     padding-left: 50px;
     padding-right: 50px;
+    
+}
+.emailBox{
+        height:40px;
+        width:30%;
+        color:rgb(65, 61, 61);
+        background-color:rgb(46, 72, 72); 
+        display:flex;
+        justify-content:space-between;
+        border-radius:40px;
 }
 .footer ul li{
     float: left;
