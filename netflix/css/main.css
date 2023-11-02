@@ -9,6 +9,71 @@ nav {
     padding: 10px 0;
 }
 
+.login {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.lang {
+    display: inline-flex;
+    color: #fff;
+    border: 1px solid grey;
+    background: transparent;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    padding: 0.25rem 3.5rem;
+    font-weight: 700;
+    min-height: 2rem;
+
+}
+.signin {
+    color: #fff;
+    background: red;
+    align-items: center;
+    box-sizing: border-box;
+    display: inline-flex;
+    border: 0;
+    border-radius: 0.25rem;
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+
+}
+.header-content {
+    color: #fff;
+    padding-left: 300px;
+    padding-top: 5px;
+    padding-bottom: 100px;
+
+}
+.header-h1 h1{
+    color: #fff;
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    padding-left: 200px;
+    padding-top: 200px;
+}
+.header-h3  h3{
+    color: #fff;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-left: 400px;
+    padding-top: 2px;
+}
+.header-content h3{
+    display: block;
+    padding-left: 130px;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+.header-content p{
+    display: block;
+    
+}
 .header-gredient {
     display: flex;
     height: minmax(100px,auto) ;
@@ -37,54 +102,6 @@ nav {
     margin-bottom: 8px;
 }
 
-.login {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-}
-
-.lang {
-    color: #fff;
-    border: 1px solid grey;
-    background: transparent;
-    align-items: center;
-    box-sizing: border-box;
-    display: inline-flex;
-    justify-content: center;
-    letter-spacing: normal;
-    position: relative;
-    fill: currentColor;
-    border-radius: 0.25rem;
-    padding: 0.25rem 3.5rem;
-    vertical-align: text-top;
-    width: auto;
-    font-size: 0.875rem;
-    font-weight: 500;
-    min-height: 2rem;
-
-}
-
-.signin {
-    color: #fff;
-    background: red;
-    align-items: center;
-    box-sizing: border-box;
-    display: inline-flex;
-    border: 0;
-    border-radius: 0.25rem;
-    padding: 0.25rem 1rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-
-}
-
-.header-content {
-    color: #fff;
-    padding-left: 300px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-
-}
 
 .logo {
     width: 150px;
