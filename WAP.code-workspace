@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"name": "WAP",
+			"path": "../WAP"
+		},
+		{
+			"name": "WAP-2",
+			"path": "."
+		},
+		{
+			"name": "Class_assignment",
+			"path": "../Class_assignment"
+		},
+		{
+			"path": "../WAP_Quiz"
+		}
+	],
+	"settings": {}
+}
