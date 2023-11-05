@@ -284,23 +284,53 @@ testArr1 = [ [1,2,3], [5,2,3], [9,2,3] ]
 // first column Sum = 1+5+9 ->15
 // firstRowColSum (testArr1) à [6, 15]
 
-function firstRowColSum(testArr1) {
-    let firstRowSum = 0;
-    let firstColSum = 0;
-    let firstRowColSum = [];
-    for (let i = 0; i < testArr1.length; i++) {
-        for (let j = 0; j < testArr1[i].length; j++) {
-            if (i == 0) {
-                firstRowSum += testArr1[i][j];
-            }
-            if (j == 0) {
-                firstColSum += testArr1[i][j];
-            }
-        }      
-    }
-    firstRowColSum.push(firstRowSum);
-    firstRowColSum.push(firstColSum);
-    console.log(firstRowColSum);
-    return firstRowColSum;
-}
-firstRowColSum(testArr1);
+// function firstRowColSum(testArr1) {
+//     let firstRowSum = 0;
+//     let firstColSum = 0;
+//     let firstRowColSum = [];
+//     for (let i = 0; i < testArr1.length; i++) {
+//         for (let j = 0; j < testArr1[i].length; j++) {
+//             if (i == 0) {
+//                 firstRowSum += testArr1[i][j];
+//             }
+//             if (j == 0) {
+//                 firstColSum += testArr1[i][j];
+//             }
+//         }      
+//     }
+//     firstRowColSum.push(firstRowSum);
+//     firstRowColSum.push(firstColSum);
+//     console.log(firstRowColSum);
+//     return firstRowColSum;
+// }
+// firstRowColSum(testArr1);
+
+ const arr = [50, "apple",{a:1}];
+// let objs = [];
+// function printTypeofEl(arr){
+// for (const key in arr) {
+//    objs.push(typeof arr[key]);
+// }
+// console.log(objs);
+// return objs;
+// }
+
+// printTypeofEl(arr);
+
+//implement push method
+// let arr3 = ["a","b","c","d"];
+
+// function strToArr(arr){
+//     let end = arr.length;
+//     for(let i = 0; i<end; i++){
+//         if(i == 3){
+//             arr[end] = "e";
+//         }
+     
+//     }
+//       console.log(arr)
+// }
+
+// strToArr(arr)
+
+
