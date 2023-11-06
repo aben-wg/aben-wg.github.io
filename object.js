@@ -333,4 +333,166 @@ testArr1 = [ [1,2,3], [5,2,3], [9,2,3] ]
 
 // strToArr(arr)
 
+// let tataTiago = {name:"Tata Tiago",manufacturer:"Tata",fuelType:"petrol",bodyType:"hatchback",seatingCapacity:5,price:5000}
+// let nexon = {name:"Tata Nexon",manufacturer:"Tata",fuelType:"diesel",bodyType:"SUV",
+// seatingCapacity:5,price:7000};
+// let mahindra = {name:"Mahindra XUV700",manufacturer:"Mahindra",fuelType:"petrol",
+// bodyType:"SUV", seatingCapacity:5,price:7500};
+// let mg = {name:"MG ZS EV",manufacturer:"Mahindra",fuelType:"Electric",bodyType:"SUV",
+// seatingCapacity:5,price:25000};
+// let volvo ={name:"Volvo XC90",manufacturer:"Volvo",fuelType:"petrol",bodyType:"hybrid",
+// seatingCapacity:7,price:35000};
 
+// let list = [tataTiago,nexon,mahindra,mg,volvo]
+// let newList = [];
+
+// function getPetrol(list,prices){
+//     for(let obj of list){
+//         if(obj.price<prices && obj.fuelType == "petrol"){
+//             newList.push(obj);
+//         }
+       
+//     }
+//     console.log(newList)
+//     return newList;
+// }
+// let price = 8000;
+
+// getPetrol(list,price);
+
+// let tatacount =0;
+// let mahindracount =0;
+// let volvocount =0;
+
+// function getPetrol(list){
+//     for(let obj of list){
+//        if(obj.manufacturer == "Tata"){
+//            tatacount+=1;
+//        }
+//        if(obj.manufacturer == "Volvo"){
+//            volvocount+=1;
+//        }
+//        if(obj.manufacturer == "Mahindra"){
+//            mahindracount+=1;
+//        }
+//     }
+//     console.log("Tata: "+tatacount + " Volvo: "+ volvocount + " Mahindra: " + mahindracount)
+//     return tatacount + volvocount + mahindracount;
+// }
+
+// getPetrol(list);
+
+// add another property to an object
+
+// let newObj = [];
+
+// function addServiceCostToAllCars(list,value){
+//     for(let obj of list){
+//         obj.serviceCost = value;
+//         newObj.push(obj)
+//     }
+//     console.log(newObj)
+// }
+
+// addServiceCostToAllCars(list,100)
+
+//Sensor
+// let frontDoor = {id:1,name:"Front Door Sensor",type:34,manufacturer:"Climax",
+// events:[{time:"100",name:"Door Closed"}, {time:"101",name:"Door Opened"}]};
+// let motionSensor = {id:2,name:"Motion Sensor",type:43,manufacturer:"NYCE",
+// events:[{time:"100",name:"Motion Detected"}]};
+// let porticoLight ={id:3,name:"Portico Light",type:54,manufacturer:"Osram",
+// events:[{time:"100",name:"Light off"}]};
+// let mainEntrance = {id:4,name:"Main Entrance",type:34,manufacturer:"Climax",
+// events:[{time:"100",name:"Door Closed"}]};
+// let list = [frontDoor, motionSensor, porticoLight, mainEntrance] ;
+//{ Climax: 2, NYCE: 1, Osram: 1 } 
+// let new_obj = {};
+// let count =0;
+// let c_climax=0;
+// let c_NYCE=0;
+// let c_Osram=0;
+
+// function groupSensorsByManufacturer(list){
+//     for(let obj of list){
+//         if(obj.manufacturer == "Climax"){
+//             c_climax+=1;
+//             new_obj[obj.manufacturer] = c_climax;
+//         }
+//         else if(obj.manufacturer == "NYCE"){
+//             c_NYCE+=1;
+//             new_obj[obj.manufacturer] = c_NYCE;
+//         }
+//         else if (obj.manufacturer == "Osram"){
+//             c_Osram+=1;
+//             new_obj[obj.manufacturer] = c_Osram;
+//         }
+//     }
+//     console.log(new_obj)
+//  return new_obj;
+// }
+
+// groupSensorsByManufacturer(list)
+
+//get the most resent event of a sensor
+// let new_obj=[]
+// function getLatestEventofSensor(list,y){
+//     for(let obj of list){
+//         for(let key of obj.events){
+//             new_obj.push(key);
+        
+//         } 
+//     }
+    
+//     console.log(new_obj.sort((a,b)=>{
+//         if(a.time > b.time){
+//             return -1;
+//         }
+//         else if(a.time<b.time){
+//             return +1;
+//         }
+//         else{
+//             return 0;
+//         }
+//     }))
+    
+// }
+
+// getLatestEventofSensor(list,1)
+
+//find most popular event of a sensor
+// let new_obj = {};
+// let count =0;
+// let c_climax=0;
+// let c_NYCE=0;
+// let c_Osram=0;
+// let max =0;
+// let temp;
+// function groupSensorsByManufacturer(list){
+//     for(let obj of list){
+//         if(obj.manufacturer == "Climax"){
+//             c_climax+=1;
+//             new_obj[obj.manufacturer] = c_climax;
+//         }
+//         else if(obj.manufacturer == "NYCE"){
+//             c_NYCE+=1;
+//             new_obj[obj.manufacturer] = c_NYCE;
+//         }
+//         else if (obj.manufacturer == "Osram"){
+//             c_Osram+=3;
+//             new_obj[obj.manufacturer] = c_Osram;
+//         }
+//     }
+//     for(let key in new_obj){
+//         if(new_obj[key] > max){
+//             max = new_obj[key];
+//             temp = key;
+//         }
+        
+        
+//     }
+//     console.log(new_obj)
+//     console.log(temp)
+    
+//  return new_obj;
+// }
