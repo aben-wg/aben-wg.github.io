@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        function changeColor() {
+            // let p = $('<p>My Paragraph</p>');
+            // let section = $('<header><section> Section </section> </header>')
+            // $("button").before(p);
+            // $("button").after(section);
+            // $("Body").css("color", "red");
+            // $("button").attr("class", "button-class");
+            // $("button").addClass("button-primary");
+            // $("button").attr("id", "button-id");
+            // console.log($("button").attr("class"));
+            // $("button").replaceWith("<h1>New Heading</h1>");
+            $("Body").css("color", "Blue");
+        }
+        function readValues() {
+            let inputId = $('#name');
+            $('body').append('<p>Name:' + inputId.val() + '</p>');
+            let radioId = $('input[name="Gender"]:checked');
+            $('body').append('<p>Gender:' + radioId.val() + '</p>');
+            // console.log(radioId.val());
+
+            let checkBoxValue = $('input[name="Skills"]:checked');
+            $('body').append('<p>Skills:' + checkBoxValue.val() + '</p>');
+            // console.log(checkBoxValue.val());
+
+            let selectId = $('#single-select');
+            $('body').append('<p>Select:' + selectId.val() + '</p>');
+            // console.log(selectId.val());
+
+            let mulSelectId = $('#mul-select');
+            $('body').append('<p>Mul Select:' + mulSelectId.val() + '</p>');
+            // console.log(mulSelectId.val());
+
+            let textAreaId = $('#textarea');
+            $('body').append('<p>Text Area:' + textAreaId.val() + '</p>');
+            // console.log(textAreaId.val());
+        }
+        function clear() {
+            $('#myDiv').html('');
+        }
+
+        function Sum() {
+            let num1 = $('#first-input').val();
+            let num2 = $('#second-input').val();
+            let result = parseInt(num1) + parseInt(num2);
+            $('#myDiv').append('<p>Result: ' + result + '</p>');
+
+        }
+        function Sub() {
+            let num1 = $('#first-input').val();
+            let num2 = $('#second-input').val();
+            let result = parseInt(num1) - parseInt(num2);
+            console.log(num1, num2)
+            $('#myDiv').append('<p>Result: ' + result + '</p>');
+
+        }
+
+
+        function Calculate() {
+            let choice = $('#single-calc').val();
+            if (choice == 'Sum') {
+                clear();
+                Sum();
+                
+            }
+            else if (choice == 'Sub') {
+                console.log("xxx")
+                clear();
+                Sub();
+                
+            }
+        }
+    </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="name" id="name" />
+    Gender
+    <input type="radio" name="Gender" value="Male" />
+    <input type="radio" name="Gender" value="Female" />
+    Skills
+    <input type="checkbox" name="Skills" value="Java" /> Java
+    <input type="checkbox" name="Skills" value="Javascript" />Javascript
+    <select name="single-select" id="single-select">
+        <option value="Compro">Compro</option>
+        <option value="Msc">Msc</option>
+    </select>
+    <br>
+    <select multiple name="mul-select" value="select" id="mul-select">
+        <option value="FPP">FPP</option>
+        <option value="MPP">MPP</option>
+    </select>
+    <br>
+    <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+    <button onclick="readValues()">Submit</button>
+    <p>Calculator</p>
+    <input type="text" name="name" id="first-input" />
+    <br>
+    <select name="single-calc" id="single-calc">
+        <option value="Sum">+</option>
+        <option value="Sub">-</option>
+    </select>
+    <br>
+    <input type="text" name="name" id="second-input" />
+    <button onclick="Calculate()">Calculate</button>
+
+    <div class="MyDiv" id="myDiv">
+
+    </div>
+</body>
+
+</html>

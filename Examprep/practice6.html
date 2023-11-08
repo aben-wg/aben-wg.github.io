@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      function data(){
+        $('#display').html('');
+         let name = $('#name');
+         $('<div><b>Name: </b>'+ name.val()+'</div>').appendTo("#display")
+         let Gender = $('input[name="gender"]:checked');
+         console.log(Gender.val())
+         $('<h4>Gender: </h4> <lable>'+ Gender.val()+'</lable>').appendTo("#display")
+         let skills = $('input[name="skills"]:checked');
+         $('<h4>Skills: </h4> <lable>'+ skills.val()+'</lable>').appendTo("#display")
+         let country_id = $('select[name="Country"] option:selected');
+         $('<h4>Country: </h4> <lable>'+ country_id.val()+'</lable>').appendTo("#display")
+         let random = $('#mul-cn');
+         $('<h4>Random: </h4> <lable>'+ random.val()+'</lable>').appendTo("#display")
+         let desc_id = $('#desc');
+         $('<h4>Description: </h4> <lable>'+ desc_id.val()+'</lable>').appendTo("#display")
+      }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: grid; grid-template-columns: 1fr 3fr;">
+        <div>
+            <label> Name</label>
+        </div>
+        <div>
+            <input type="text" id="name">
+        </div>
+        <div>
+            <label> Gender</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" id="Gender" value="Male" checked>male<input type="radio" name="gender" id="Gender" value="Female">female
+        </div>
+        <div>
+            <label >Skills</label>
+        </div>
+        <div>
+            <input type="checkbox" name="skills" id="Skills" value="Java" checked>Java<input type="checkbox" name="skills" id="Skills" value="JavaScript">JavaScript
+        </div>
+        <div>
+            <label >Country</label>
+        </div>
+        <div>
+            <select name="Country" id="country">
+                <option value="Canada">Canada</option>
+                <option value="United States">United States</option>
+            </select>
+        </div>
+        <div>
+            <label >Random Option</label>
+        </div>
+        <div>
+            <select multiple name="mul-cn" id="mul-cn">
+                <option value="option 1" selected>Option 1</option>
+                <option value="option 2" selected>Option 2</option>
+            </select>
+        </div>
+        <div>
+            <label >Description</label>
+        </div>
+        <div>
+            <textarea name="desc" id="desc" cols="10" rows="2"></textarea>
+        </div>
+        
+        <div>
+            <button type="submit" onclick="data()"> Submit</button>
+        </div>
+   
+    </div>
+    <hr />
+    <h5>Selected Values</h5>
+    <hr />
+    <div class="ans-container" style="display: flex;">
+       
+        <div id="display">
+        
+        </div>
+    </div>
+    
+</body>
+</html>

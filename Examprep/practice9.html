@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+let obj = [{Name:'Ram',Age:30,Skills:['java','javascript']},
+
+{Name:'Shyam',Age:20,Skills:['python','c']}]
+        
+ function display(){
+    $('<div><h5>Select Studet</h5></div>?').appendTo('body')
+  let select =   $('<select id="name"></select>?')
+   for (let key of obj) {
+   let opt = $('<option>'+key.Name+'</option>')
+   select.append(opt).appendTo('body')
+   }
+   $('<button onclick="populate()">Populate</button>').appendTo('body');
+   $('<div style="display=none" id="div-age"><lable>Age</lable><input type="text" id="age"><div>').appendTo('body');
+   $('<div style="display=none" id="div-skill"><lable>Skills</lable><input type="checkbox" name="skill"><lable>Java</lable><input type="checkbox" name="skill"><lable>JavaScript</lable></div>').appendTo('body');
+   $('<button onclick="submit()">Submit</button>').appendTo('body');
+  
+
+ }
+
+function populate(){
+ let sel = $('#name');
+ if(sel.val() == 'Ram'){
+    $('#age').attr('value','')
+ }
+
+}
+
+function submit(){
+
+}
+   $(function(){
+    display();
+   })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

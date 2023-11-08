@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+
+        function display() {
+            $('<lable>Name<lable><input type="text">').appendTo('body')
+            $('<br>').appendTo('body')
+            $('<br>').appendTo('body')
+
+            $('<lable>Description<lable><textarea type="text">').appendTo('body')
+            $('<br>').appendTo('body')
+            $('<br>').appendTo('body')
+
+            $('<lable>Country<lable><select><option>Python</option><option>JavaScript</option><option>Python</option></select>').appendTo('body')
+            $('<br>').appendTo('body')
+            $('<br>').appendTo('body')
+
+            $('<lable>Address<lable><select multiple><option>Home</option><option>Office</option><option>Work</option></select>').appendTo('body')
+            $('<br>').appendTo('body')
+            $('<br>').appendTo('body')
+
+            $('<lable>Gender  <lable><input type="radio"><lable>Male<lable><input type="radio"><lable>Female<lable>').appendTo('body')
+            $('<br>').appendTo('body')
+            $('<br>').appendTo('body')
+            $('<lable>Skills <lable><input type="checkbox" ><lable>Java <lable><input type="checkbox" ><lable>JavaScript <lable>').appendTo('body')
+
+
+
+        }
+        $(function () {
+            display();
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
