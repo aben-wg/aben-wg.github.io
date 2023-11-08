@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        let fruits = ['apple', 'pear', 'grapes'];
+        function buildArray() {
+            let myUl = $('#myUl');
+            if (myUl.length > 0) {
+                myUl.html('');
+            }
+            else {
+                myUl = $('<ul id="myUl"></ul>');
+                $('body').append(myUl);
+            }
+            let html= '';
+
+            for (let ele in fruits) {
+               
+                if (fruits[ele].charAt(0) == 'a') {
+                    html+= '<li style="color:red">' + fruits[ele] + '</li>';
+                    
+                }
+                else {
+                    html+= '<li>' + fruits[ele] + '</li>';
+                }
+                
+            }
+            $('#myUl').html(html);
+        }
+        $(function () {
+            buildArray();
+        })
+    </script>
+</head>
+
+<body>
+   
+</body>
+
+</html>

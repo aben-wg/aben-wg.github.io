@@ -250,7 +250,7 @@ function arrayToString(array) {
 // function scoreForecasts(forecast2, observed2) {
 //     let avg = 0;
 //     let sum = [];
-    
+
 //     for (let i = 0; i < forecast2.length; i++) {
 //         let diff = observed2[i] - forecast2[i];
 //         if(diff <0){
@@ -279,7 +279,7 @@ function arrayToString(array) {
 //     return avg;
 // }
 
-testArr1 = [ [1,2,3], [5,2,3], [9,2,3] ]
+testArr1 = [[1, 2, 3], [5, 2, 3], [9, 2, 3]]
 // first row Sum = 1+2+3 = 6
 // first column Sum = 1+5+9 ->15
 // firstRowColSum (testArr1) à [6, 15]
@@ -305,7 +305,7 @@ testArr1 = [ [1,2,3], [5,2,3], [9,2,3] ]
 // }
 // firstRowColSum(testArr1);
 
- const arr = [50, "apple",{a:1}];
+const arr = [50, "apple", { a: 1 }];
 // let objs = [];
 // function printTypeofEl(arr){
 // for (const key in arr) {
@@ -326,7 +326,7 @@ testArr1 = [ [1,2,3], [5,2,3], [9,2,3] ]
 //         if(i == 3){
 //             arr[end] = "e";
 //         }
-     
+
 //     }
 //       console.log(arr)
 // }
@@ -351,7 +351,7 @@ testArr1 = [ [1,2,3], [5,2,3], [9,2,3] ]
 //         if(obj.price<prices && obj.fuelType == "petrol"){
 //             newList.push(obj);
 //         }
-       
+
 //     }
 //     console.log(newList)
 //     return newList;
@@ -440,10 +440,10 @@ testArr1 = [ [1,2,3], [5,2,3], [9,2,3] ]
 //     for(let obj of list){
 //         for(let key of obj.events){
 //             new_obj.push(key);
-        
+
 //         } 
 //     }
-    
+
 //     console.log(new_obj.sort((a,b)=>{
 //         if(a.time > b.time){
 //             return -1;
@@ -455,7 +455,7 @@ testArr1 = [ [1,2,3], [5,2,3], [9,2,3] ]
 //             return 0;
 //         }
 //     }))
-    
+
 // }
 
 // getLatestEventofSensor(list,1)
@@ -488,11 +488,21 @@ testArr1 = [ [1,2,3], [5,2,3], [9,2,3] ]
 //             max = new_obj[key];
 //             temp = key;
 //         }
-        
-        
+
+
 //     }
 //     console.log(new_obj)
 //     console.log(temp)
-    
+
 //  return new_obj;
 // }
+
+// let array = [{ name: 'Ram', age: 20 }, { name: 'Vivek', age: 30 }]
+
+// function filterByName(array) {
+
+//     console.log(array.filter(obj => obj.name.includes('a')));
+// }
+
+
+// filterByName(array)

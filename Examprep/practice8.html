@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let obj = [{ humidity: 20, speed: 30 }, { humidity: 10, speed: 40 }];
+        let obj_2 = []
+        function display() {
+       let select=   $('<select multiple></select>')
+       for (let key of obj) {
+        for (let ele in key) {
+        if(!obj_2.includes(ele)){
+         obj_2.push(ele)
+        }
+        }
+       }
+       for(let x in obj_2){
+        let option= $('<option selected>'+obj_2[x]+'</option>')
+        select.append(option).appendTo('body')
+       }
+       $('input[name="gen"]:checked')
+        }
+        $(function () {
+            display();
+        })
+
+
+    </script>
+    <title>Document</title>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

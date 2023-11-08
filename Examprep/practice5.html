@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        let arr = ['rose', 'lily', 'jinia']
+        
+        let select = $('<select id="selected"></select>')
+
+        function display() {
+         $('<button onclick="onFilter()">Filter</button>').appendTo('body')
+        for (let key in arr) {
+             $('<option>' + arr[key] + '</option>').appendTo(select)
+            }
+            $(select).appendTo('body')
+           
+        }
+        function onFilter(){
+            let myselect = $('#selected');
+            myselect.html('')
+         for (let key in arr) {
+           if(arr[key].length >= 5){
+            
+            $('<option>' + arr[key] + '</option>').appendTo(select)
+           }
+           }
+           $(select).appendTo('body')
+         }
+
+        $(function () {
+            display();
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+
+        function display() {
+
+            let objs = { tags: ['div', 'label'], text: ['Welcome', 'Some Text'], color: ['blue', 'green'] }
+            let div = $('<div id="myDiv"></div>')
+            let lable = $('<lable id="myLable"></lable>')
+            for (const obj in objs) {
+                if (obj == 'tags') {
+                    console.log(objs[obj])
+                    $('<lable>Select Tag:  </lable><select id="tag"><option value ="div"">' + objs[obj][0] + '</option><option value="lable">' + objs[obj][1] + '</option></select>').appendTo('body');
+
+                }
+                else if(obj == 'text'){
+                   $('<br>').appendTo('body')
+                   
+                   $('<lable>Select Text : <lable><lable>'+ objs[obj][0] +' </lable><input type="radio" name="radio" value= ""><lable>'+ objs[obj][1] +' </lable><input type="radio" name="radio" value= "">').appendTo('body');
+                   
+                   console.log(obj)
+                   
+                }
+                else if(obj == 'color'){
+                   $('<br>').appendTo('body')
+                   $('<lable>Select Color : <lable><select id="color"><option>' + objs[obj][0] + '</option><option>' + objs[obj][1] + '</option></select>').appendTo('body');
+                   console.log(obj)
+                   
+                }
+        
+                //    console.log(objs[obj]);
+                //    console.log(obj);
+               
+            }
+           
+            $('<br>').appendTo('body')
+            $('<br>').appendTo('body')
+            $('<button></button>').text("MyButton").appendTo('body')
+
+
+
+
+
+        }
+
+        $(function () {
+            display();
+        })
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

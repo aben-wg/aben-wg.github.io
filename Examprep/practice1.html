@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+       
+      function display(){
+        $('#myResult').html('')
+        let name = $('#name');
+        let sex =  $('input[name="Gender"]:checked');
+        let skill = $('input[name="Skills"]:checked');
+        let select = $('#mul-select');
+        let desc = $('#desc');
+        console.log(sex.val())
+        $('#myResult').append('<div><h4>Name</h4>'+name.val()+'</div>')
+        $('#myResult').append('<div><h4>Gender</h4>'+sex.val()+'</div>')
+        $('#myResult').append('<div><h4>Skills</h4>'+skill.val()+'</div>')
+        $('#myResult').append('<div><h4>Country</h4>'+select.val()+'</div>')
+        $('#myResult').append('<div><h4>Random option</h4>'+desc.val()+'</div>')
+      }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <Label>Name</Label>
+        <input type="text" name="name" id="name">
+        <br>
+        <Label>Gender</Label>
+        <input type="radio" name="Gender" value="male"  >Male
+        <input type="radio" name="Gender" value="female"  >Female
+        <br>
+        <Label>Skills </Label>
+        <input type="checkbox" name="Skills" value="java" id="skill">
+        Java
+        <input type="checkbox" name="Skills" value="Javascript" id="skill">
+        Javascript
+        <br>
+        <Label>Country</Label>
+        <select multiple id="mul-select">
+            <option value="option 1">Option 1</option>
+            <option value="option 2">Option 2</option>
+
+        </select>
+        <br><br>
+        <Label>Description </Label>
+        <textarea id="desc"></textarea>
+        <br>
+       <button type="submit" onclick="display()">Submit</button>
+    </div>
+    <div id="myResult">
+
+    </div>
+</body>
+</html>
