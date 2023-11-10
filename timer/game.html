@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        
+        #image {
+          position: absolute;
+          top: 0;
+          left: 99%;
+        }
+      </style>
+    <Script>
+        var image = $("#image");
+        // image.css("left", "100%");
+        let i = 5;decr=false;
+        setInterval(function (){
+            if(!decr && i>(window.innerWidth-90) || (decr && i>0)){
+                decr=true;
+                i=i-5
+            }else{
+                i=i+5;
+                decr=false;
+            }
+            image.css("margin-left",i+"px");
+
+            }, 100)
+
+    </Script>
+</head>
+
+<body>
+    <div id="container">
+        <img id="image" src="plane.jpeg" width="200" height="200">
+    </div>
+</body>
+
+</html>

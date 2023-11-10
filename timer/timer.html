@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        let str = "Design your own major"
+        let str2 = "Hi this is a news"
+        let i = 0;
+        let intId;
+
+        $('')
+        function secondInt() {
+            intId2 = setInterval(function () {
+                $('body').append(str2[i]);
+                i++;
+                if (i == str.length) {
+                    secondInt();
+                    console.log('am here')
+                    $('body').empty();
+                    clearInterval(intId2);
+                }
+            }, 200);
+        };
+
+        intId = setInterval(function () {
+            $('body').append(str[i]);
+            i++;
+            if (i == str.length) {
+                secondInt();
+                console.log('am here')
+                $('body').empty();
+                clearInterval(intId);
+                i=0;
+            }
+        }, 200);
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
