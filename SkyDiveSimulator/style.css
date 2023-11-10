@@ -1,0 +1,35 @@
+body{
+    background-image: url('/images/2222.avif');
+    background-repeat: no-repeat;
+    background-size: 1500px 1000px;
+
+}
+
+#img1 {
+    width:40%;
+    position: fixed;
+    bottom: 80px; 
+    margin-left: -200px;
+    left:0;
+    transition: transform 10s ease;
+}
+
+#img2 {
+    width:10%;
+    position:absolute;
+    margin-right: -200px;
+    top: 0px;
+    right: 0;
+    visibility: hidden;
+    transition: transform 10s linear;
+}
+
+#diver1, #diver2, #diver3{
+    width:30px;
+    position:absolute;
+    visibility: hidden;
+    margin-right: -200px;
+    margin-top: auto 20px; 
+    height: 30px;
+    transition: transform 10s linear;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        let toggle = 0;
+        let k = 0; let height = 0;
+        $("document").ready(function () {
+            height = parseInt($("div").css("height"));
+        })
+        let myId = setInterval(function () {
+            if (k > height-1) {
+                clearInterval(myId)
+            }
+
+            if (toggle == 0) {
+                $("#diver33").attr('src', "images/diver1.png");
+                toggle = 1;
+            } else {
+                
+                $("#diver33").attr('src', "/images/diver2.png");
+            }
+            k = k + 1;
+            $("#diver33").css("top", k + "px")
+            $("#diver33").css("left", k + "px")
+
+        }, 100)
+    </script>
+</head>
+<body>
+    <div>
+        <img style='position:relative;width:100px;height:100px;' id="diver33"  src="images/diver2.png">
+    </div>
+</body>
+</html>
